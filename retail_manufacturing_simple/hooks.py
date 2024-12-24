@@ -5,6 +5,23 @@ app_description = "Simplified ERP for Retail and Manufacturing"
 app_email = "fwomarahmed@gmail.com"
 app_license = "mit"
 
+
+app_include_css = "/assets/eden_desk_customisations/css/eden_desk_customisations.css"
+app_include_js = "/assets/eden_desk_customisations/js/eden_desk_customisations.js"
+
+fixtures = [
+    # Export all workspaces
+    {"doctype": "Workspace"},
+
+    # Export specific workspaces with filters
+    {
+        "doctype": "Workspace",
+        "filters": {
+            "name": ["in", ["ERPNext Settings", "Integration", "ERPNext Integration", "Build"]]
+        }
+    },
+]
+
 # Apps
 # ------------------
 
